@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Vagas Aggregator",
+        "slug": "vagas",
+        "apiVersion": 2
+    },
+    {
+        "title": "Sports Agenda",
+        "slug": "sports-agenda",
+        "apiVersion": 1
+    }
+]
