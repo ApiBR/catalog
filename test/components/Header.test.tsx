@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Header from './Header';
+import Header from '../../src/components/Header';
 
 describe('Header Component', () => {
   it('renders the API BR logo and title', () => {

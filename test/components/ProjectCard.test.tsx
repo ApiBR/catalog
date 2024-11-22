@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import ProjectCard from "./ProjectCard";
-import { Project } from "../types";
+import ProjectCard from "../../src/components/ProjectCard";
+import { Project } from "../../src/types";
 
 describe("ProjectCard Component", () => {
   const mockProject: Project = {
