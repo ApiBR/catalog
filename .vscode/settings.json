@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "connectionId": "apibr",
+        "projectKey": "ApiBR_catalog"
+    }
+}
