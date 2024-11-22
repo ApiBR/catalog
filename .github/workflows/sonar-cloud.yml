@@ -25,12 +25,15 @@ jobs:
         run: npm install
 
       - name: Test and coverage
-        run: npm run test -- --coverage
+        run: npm run test:coverage
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         if: >-
           (
+            github.event_name == 'push' &&
+            github.ref == 'refs/heads/main'
+          ) || (
             github.event_name == 'pull_request' &&
             github.event.pull_request.head.repo.full_name == github.repository
           ) || (
