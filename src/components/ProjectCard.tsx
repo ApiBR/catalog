@@ -11,7 +11,7 @@ const Card = styled.div`
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2);
   }
 `;
 
@@ -79,7 +79,7 @@ const ProjectCard: React.FC<Project> = ({ title, slug, apiVersion }) => {
   const apiUrl = `https://apibr.com/${slug}/api/v${apiVersion}`;
 
   return (
-    <Card>
+    <Card data-testid="project-card">
       <Image src={imageUrl} alt={title} />
       <Content>
         <Title>{title}</Title>

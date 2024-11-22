@@ -64,7 +64,7 @@ const FooterContainer = styled.footer`
  */
 const Footer: React.FC = () => (
   <FooterContainer>
-    Desenvolvido por{' '}
+    Developed by{' '}
     <a
       href="https://guibranco.github.io/?utm_campaign=project&utm_media=api-br-catalog&utm_source=apibr.com"
       target="_blank"
