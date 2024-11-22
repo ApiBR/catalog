@@ -30,6 +30,21 @@ const Subtitle = styled.p`
   color: #ffdf00; /* Brazilian flag yellow */
 `;
 
+/**
+ * A functional component that renders the header section of the application.
+ * This component includes a logo, a title, and a subtitle to provide context
+ * for the application.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered header component containing the logo,
+ *                        title, and subtitle.
+ *
+ * @example
+ * // Usage of the Header component
+ * <Header />
+ *
+ * @see {@link https://reactjs.org/docs/components-and-props.html} for more information on React components.
+ */
 const Header: React.FC = () => (
   <HeaderContainer>
     <Logo src="https://apibr.com/ApiBRLogo.png" alt="API BR Logo" />
