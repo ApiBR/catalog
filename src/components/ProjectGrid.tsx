@@ -29,7 +29,7 @@ const Grid = styled.div`
  * @throws {Error} Throws an error if the projects prop is not an array.
  */
 const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => (
-  <Grid>
+  <Grid data-testid="project-grid">
     {projects.map((project) => (
       <ProjectCard key={project.title} {...project} />
     ))}
