@@ -38,6 +38,30 @@ const FooterContainer = styled.footer`
   }
 `;
 
+/**
+ * Footer component that displays the developer's information and links.
+ *
+ * This functional component renders a footer section containing:
+ * - Developer's name with a link to their profile.
+ * - An image representing the developer.
+ * - A link to the project's GitHub repository.
+ *
+ * The component uses React.FC type for functional components in TypeScript.
+ *
+ * @returns {JSX.Element} The rendered footer component.
+ *
+ * @example
+ * // Usage in a React application
+ * import Footer from './Footer';
+ *
+ * function App() {
+ *   return (
+ *     <div>
+ *       <Footer />
+ *     </div>
+ *   );
+ * }
+ */
 const Footer: React.FC = () => (
   <FooterContainer>
     Desenvolvido por{' '}
