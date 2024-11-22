@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import ProjectGrid from "./ProjectGrid";
-import { Project } from "../types";
+import ProjectGrid from "../../src/components/ProjectGrid";
+import { Project } from "../../src/types";
 
 // Mock data for testing
 const mockProjects: Project[] = [
