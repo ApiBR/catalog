@@ -14,7 +14,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     outputs:
-      fullSemVer: ${{ steps.gitversion.outputs.fullSemVer }}
+      semVer: ${{ steps.gitversion.outputs.semVer }}
 
     steps:
       - name: Checkout repository
@@ -61,7 +61,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     env:
-      fullSemVer: ${{ needs.deploy_service.outputs.fullSemVer }}
+      semVer: ${{ needs.deploy_service.outputs.semVer }}
 
     steps:
       - name: Create Release
@@ -71,7 +71,7 @@ jobs:
           allowUpdates: false
           draft: false
           makeLatest: true
-          tag: v${{ env.fullSemVer }}
-          name: Release v${{ env.fullSemVer }}
+          tag: v${{ env.semVer }}
+          name: Release v${{ env.semVer }}
           generateReleaseNotes: true
-          body: Release ${{ env.fullSemVer }} of ${{ github.repository }}
+          body: Release ${{ env.semVer }} of ${{ github.repository }}
