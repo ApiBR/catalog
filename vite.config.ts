@@ -1,9 +1,12 @@
-import { defineConfig } from 'vitest/config';
+import { defineConfig as defineViteConfig, mergeConfig } from 'vite';
+import { defineConfig as defineVitestConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react-swc';
 
-// https://vite.dev/config/
-export default defineConfig({
+const viteConfig = defineViteConfig({
   plugins: [react()],
+});
+
+const vitestConfig = defineVitestConfig({
   test: {
     globals: true,
     environment: 'jsdom',
@@ -11,7 +14,9 @@ export default defineConfig({
     coverage: {
       reporter: ['text', 'html', 'lcov'],
       include: ['src/**/*.{ts,tsx}'],
-      exclude: ['node_modules', 'test/**/*', 'src/main.tsx', 'src/*.d.ts'],
+      exclude: ['node_modules', 'test/**/*', 'src/main.tsx', 'src/*.d.ts', 'src/types/*.d.ts'],
     },
-  },
+  }
 });
+
+export default mergeConfig(viteConfig, vitestConfig);
