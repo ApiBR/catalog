@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} !^apibr\.com$ [NC]
+RewriteRule ^(.*)$ https://apibr.com/$1 [L,R=301]
