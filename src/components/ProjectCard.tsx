@@ -55,13 +55,20 @@ const LinkButton = styled.a`
   }
 `;
 
+const Description = styled.p`
+  margin: 0;
+  font-size: 1rem;
+  color: #000000;
+`;
+
 /**
  * A functional component that renders a project card displaying project details.
  *
  * @component
  * @param {Object} props - The properties for the ProjectCard component.
  * @param {string} props.title - The title of the project.
- * @param {string} props.slug - The unique identifier for the project, used in URLs.
+ * @param {string} props.description - The description of the project.
+ * @param {string} props.slug - The unique identifier for the project is used in URLs.
  * @param {number} props.apiVersion - The version of the API to be displayed.
  *
  * @returns {JSX.Element} A JSX element representing the project card.
@@ -94,6 +101,7 @@ const ProjectCard: React.FC<Project> = ({ title, slug, apiVersion }) => {
             API (v{apiVersion})
           </LinkButton>
         </Links>
+        <Description>{description}</Description>
       </Content>
     </Card>
   );
