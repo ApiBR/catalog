@@ -68,7 +68,7 @@ const Description = styled.p`
  * @param {Object} props - The properties for the ProjectCard component.
  * @param {string} props.title - The title of the project.
  * @param {string} props.description - The description of the project.
- * @param {string} props.slug - The unique identifier for the project is used in URLs.
+ * @param {string} props.slug - The unique identifier for the project, used in URLs.
  * @param {number} props.apiVersion - The version of the API to be displayed.
  *
  * @returns {JSX.Element} A JSX element representing the project card.
