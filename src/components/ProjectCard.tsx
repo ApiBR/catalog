@@ -79,7 +79,7 @@ const Description = styled.p`
  *
  * @throws {Error} Throws an error if any required prop is missing.
  */
-const ProjectCard: React.FC<Project> = ({ title, slug, apiVersion }) => {
+const ProjectCard: React.FC<Project> = ({ title, description, slug, apiVersion }) => {
   const imageUrl = `project-images/${slug}.png`;
   const uiUrl = `https://apibr.com/ui/${slug}`;
   const swaggerUrl = `https://apibr.com/${slug}/swagger`;
