@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react-swc';
 
 const viteConfig = defineViteConfig({
   plugins: [react()],
+  base: '/ui/',
 });
 
 const vitestConfig = defineVitestConfig({
