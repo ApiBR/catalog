@@ -1,11 +1,13 @@
 [
     {
         "title": "Vagas Aggregator",
+        "description": "📝🏢 Aggregates open vacancies for developers based on more than 50 GitHub accounts for opportunities and some other sites.",
         "slug": "vagas",
         "apiVersion": 2
     },
     {
         "title": "Sports Agenda",
+        "description": "📆 ⚽ Sports Agenda with leagues, teams, matches, and results of most famous footballs leagues.",
         "slug": "sports-agenda",
         "apiVersion": 1
     }
