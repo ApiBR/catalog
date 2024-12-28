@@ -47,14 +47,14 @@ jobs:
       - name: Test
         run: npm test
 
-    # - name: Upload build
-    #   uses: sebastianpopp/ftp-action@releases/v2
-    #   with:
-    #     host: ${{ secrets.FTP_SERVER }}
-    #     user: ${{ secrets.FTP_USERNAME }}
-    #     password: ${{ secrets.FTP_PASSWORD }}
-    #     localDir: "dist/"
-    #     remoteDir: "/"
+      - name: Upload build
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: "dist/"
+          remoteDir: "/"
 
   create_release:
     name: Create release
