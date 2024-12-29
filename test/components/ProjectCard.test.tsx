@@ -5,6 +5,7 @@ import { Project } from "../../src/types";
 describe("ProjectCard Component", () => {
   const mockProject: Project = {
     title: "Sample Project",
+    description: "Sample project description",
     slug: "sample-project",
     apiVersion: 1,
   };
@@ -47,6 +48,12 @@ describe("ProjectCard Component", () => {
       "href",
       `https://apibr.com/${mockProject.slug}/api/v${mockProject.apiVersion}`
     );
+  });
+
+  it("renders the project description", () => {
+    render(<ProjectCard {...mockProject} />);
+    const descriptionElement = screen.getByText(mockProject.description);
+    expect(descriptionElement).toBeInTheDocument();
   });
 
   it("applies hover styles correctly", () => {

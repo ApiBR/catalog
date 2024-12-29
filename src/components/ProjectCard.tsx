@@ -55,12 +55,19 @@ const LinkButton = styled.a`
   }
 `;
 
+const Description = styled.p`
+  margin: 0;
+  font-size: 1rem;
+  color: #000000;
+`;
+
 /**
  * A functional component that renders a project card displaying project details.
  *
  * @component
  * @param {Object} props - The properties for the ProjectCard component.
  * @param {string} props.title - The title of the project.
+ * @param {string} props.description - The description of the project.
  * @param {string} props.slug - The unique identifier for the project, used in URLs.
  * @param {number} props.apiVersion - The version of the API to be displayed.
  *
@@ -72,7 +79,7 @@ const LinkButton = styled.a`
  *
  * @throws {Error} Throws an error if any required prop is missing.
  */
-const ProjectCard: React.FC<Project> = ({ title, slug, apiVersion }) => {
+const ProjectCard: React.FC<Project> = ({ title, description, slug, apiVersion }) => {
   const imageUrl = `project-images/${slug}.png`;
   const uiUrl = `https://apibr.com/ui/${slug}`;
   const swaggerUrl = `https://apibr.com/${slug}/swagger`;
@@ -94,6 +101,7 @@ const ProjectCard: React.FC<Project> = ({ title, slug, apiVersion }) => {
             API (v{apiVersion})
           </LinkButton>
         </Links>
+        <Description>{description}</Description>
       </Content>
     </Card>
   );

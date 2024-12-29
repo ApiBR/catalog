@@ -5,14 +5,16 @@ import App from '../src/App';
 describe('App Component', () => {
   it('renders the Header component', () => {
     render(<App />);
-    const headerElement = screen.getByText(/API BR - Catalog/i);
+    const headerElement = screen.getByText(/^API BR - Catalog$/i);
     expect(headerElement).toBeInTheDocument();
   });
 
   it('renders the ProjectGrid component with projects', () => {
     render(<App />);
-    const projectTitle = screen.getByText(/Sports Agenda/i);
-    expect(projectTitle).toBeInTheDocument();
+    const projectTitleVagasAggregator = screen.getByText(/^Vagas Aggregator$/i);
+    expect(projectTitleVagasAggregator).toBeInTheDocument();
+    const projectTitleSportsAgenda = screen.getByText(/^Sports Agenda$/i);
+    expect(projectTitleSportsAgenda).toBeInTheDocument();
   });
 
   it('renders the Footer component', () => {
