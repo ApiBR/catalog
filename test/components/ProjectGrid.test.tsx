@@ -2,7 +2,6 @@ import { render, screen } from "@testing-library/react";
 import ProjectGrid from "../../src/components/ProjectGrid";
 import { Project } from "../../src/types";
 
-// Mock data for testing
 const mockProjects: Project[] = [
   { title: "Project 1", description: "Project 1 description", slug: "project-1", apiVersion: 1 },
   { title: "Project 2", description: "Project 2 description", slug: "project-2", apiVersion: 1 },
