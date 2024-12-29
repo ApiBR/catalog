@@ -84,7 +84,7 @@ const Footer: React.FC = () => (
     >
       Guilherme Branco Stracini
     </a>{' '}
-    | Repositório{' '}
+    | Repository{' '}
     <a href="https://github.com/ApiBR/catalog" target="_blank" rel="noopener noreferrer">
       <svg height="32px" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <title>GitHub</title>
