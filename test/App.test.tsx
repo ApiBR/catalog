@@ -11,7 +11,7 @@ describe('App Component', () => {
 
   it('renders the ProjectGrid component with projects', () => {
     render(<App />);
-    const projectTitleVagasAggregator = screen.getByText(/^Vagas Aggregator$/i/);
+    const projectTitleVagasAggregator = screen.getByText(/^Vagas Aggregator$/i);
     expect(projectTitleVagasAggregator).toBeInTheDocument();
     const projectTitleSportsAgenda = screen.getByText(/^Sports Agenda$/i);
     expect(projectTitleSportsAgenda).toBeInTheDocument();
