@@ -5,7 +5,7 @@ import App from '../src/App';
 describe('App Component', () => {
   it('renders the Header component', () => {
     render(<App />);
-    const headerElement = screen.getByText(/^API BR - Catalog^/i);
+    const headerElement = screen.getByText(/^API BR - Catalog$/i);
     expect(headerElement).toBeInTheDocument();
   });
 
