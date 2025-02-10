@@ -76,3 +76,13 @@ To set up the project locally, follow these steps:
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Pixeebot Activity Dashboard
+
+<img alt="DashList" src="https://docs.pixee.ai/img/pixee_dashlist.png">
+
+👋 This dashboard summarizes Pixeebot's activity on the repository, highlighting available improvement opportunities.
+
+**Recommendations:**
+- Last analysis: Feb 09 | Next scheduled analysis: Feb 16
+
+**Note:** The repository's primary language is JavaScript. To enable automatic code fixes, please connect and upload results from a supported code scanning tool (e.g., SonarCloud, SonarQube, CodeQL, Semgrep).
