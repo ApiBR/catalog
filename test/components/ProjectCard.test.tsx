@@ -29,7 +29,7 @@ describe("ProjectCard Component", () => {
   it("renders the UI link with the correct URL", () => {
     render(<ProjectCard {...mockProject} />);
     const uiLink = screen.getByText("UI").closest("a");
-    expect(uiLink).toHaveAttribute("href", `https://apibr.com/ui/${mockProject.slug}`);
+    expect(uiLink).toHaveAttribute("href", `https://apibr.com/ui/${mockProject.slug}/`);
   });
 
   it("renders the Swagger link with the correct URL", () => {
