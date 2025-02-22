@@ -81,7 +81,7 @@ const Description = styled.p`
  */
 const ProjectCard: React.FC<Project> = ({ title, description, slug, apiVersion }) => {
   const imageUrl = `project-images/${slug}.png`;
-  const uiUrl = `https://apibr.com/ui/${slug}`;
+  const uiUrl = `https://apibr.com/ui/${slug}/`;
   const swaggerUrl = `https://apibr.com/${slug}/swagger`;
   const apiUrl = `https://apibr.com/${slug}/api/v${apiVersion}`;
 
