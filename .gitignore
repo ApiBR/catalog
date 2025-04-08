@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Coverage results
-/coverage/**
+# Test coverage
+coverage

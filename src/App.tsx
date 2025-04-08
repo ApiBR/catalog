@@ -1,29 +1,26 @@
-import React from 'react';
-import ProjectGrid from './components/ProjectGrid';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import projectsData from './projects.json'; // Import the JSON file
-import { Project } from './types';
+import { useState } from 'react';
+import { Language } from './types';
+import { Header } from './components/Header';
+import { ProjectsGrid } from './components/ProjectsGrid';
+import { Footer } from './components/Footer';
 
-const projects: Project[] = projectsData;
+function App() {
+  const [language, setLanguage] = useState<Language>('pt-BR');
 
-/**
- * The main application component that serves as the entry point for the React application.
- * It renders the Header, ProjectGrid, and Footer components.
- *
- * @component
- * @returns {JSX.Element} The rendered application component containing the header, project grid, and footer.
- *
- * @example
- * // Usage of the App component
- * ReactDOM.render(<App />, document.getElementById('root'));
- */
-const App: React.FC = () => (
-  <>
-    <Header />
-    <ProjectGrid projects={projects} />
-    <Footer />
-  </>
-);
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      <Header 
+        language={language}
+        onLanguageChange={setLanguage}
+      />
+
+      <main className="flex-1 w-full py-12">
+        <ProjectsGrid language={language} />
+      </main>
+
+      <Footer language={language} />
+    </div>
+  );
+}
 
 export default App;

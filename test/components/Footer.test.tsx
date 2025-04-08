@@ -1,30 +1,27 @@
 import { render, screen } from '@testing-library/react';
-import Footer from '../../src/components/Footer';
+import { describe, it, expect } from 'vitest';
+import { Footer } from '../../src/components/Footer';
 
-describe('Footer Component', () => {
-  it('renders the developer information', () => {
-    render(<Footer />);
-    expect(screen.getByText(/Developed by/)).toBeInTheDocument();
-    expect(screen.getByAltText('Guilherme Branco Stracini')).toBeInTheDocument();
-    expect(
-      screen.getByText('Guilherme Branco Stracini').closest('a')
-    ).toHaveAttribute('href', expect.stringContaining('https://guibranco.github.io'));
+describe('Footer', () => {
+  it('renders developer information', () => {
+    render(<Footer language="en-US" />);
+    expect(screen.getByText('Developed by')).toBeInTheDocument();
+    expect(screen.getByText('Guilherme Branco Stracini')).toBeInTheDocument();
   });
 
-  it('renders the GitHub repository link', () => {
-    render(<Footer />);
-    const githubLink = screen.getAllByText('GitHub')[1].closest('a');
-    expect(githubLink).toHaveAttribute(
+  it('renders repository link', () => {
+    render(<Footer language="en-US" />);
+    expect(screen.getByText('Repository')).toBeInTheDocument();
+    expect(screen.getByText('GitHub')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /github/i })).toHaveAttribute(
       'href',
       'https://github.com/ApiBR/catalog'
     );
-    expect(screen.getByTitle('GitHub')).toBeInTheDocument();
   });
 
-  it('renders the footer with appropriate content', () => {
-    render(<Footer />);
-    const footerElement = screen.getByRole('contentinfo');
-    expect(footerElement).toBeInTheDocument();
-    expect(footerElement).toHaveTextContent('Developed by');
+  it('renders developer image with correct dimensions', () => {
+    render(<Footer language="en-US" />);
+    const img = screen.getByAltText('Guilherme Branco Stracini');
+    expect(img).toHaveClass('h-[44px]', 'w-[24px]');
   });
 });
