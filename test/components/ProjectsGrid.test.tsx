@@ -4,11 +4,27 @@ import { ProjectsGrid } from '../../src/components/ProjectsGrid';
 import { projects } from '../../src/data/projects';
 
 describe('ProjectsGrid', () => {
-  it('renders all projects', () => {
+  it('renders all projects in English', () => {
     render(<ProjectsGrid language="en-US" />);
     projects.forEach(project => {
       expect(screen.getByText(project.title)).toBeInTheDocument();
       expect(screen.getByText(project.description['en-US'])).toBeInTheDocument();
+    });
+  });
+
+  it('renders all projects in Portuguese', () => {
+    render(<ProjectsGrid language="pt-BR" />);
+    projects.forEach(project => {
+      expect(screen.getByText(project.title)).toBeInTheDocument();
+      expect(screen.getByText(project.description['pt-BR'])).toBeInTheDocument();
+    });
+  });
+
+  it('renders all projects in Spanish', () => {
+    render(<ProjectsGrid language="es-ES" />);
+    projects.forEach(project => {
+      expect(screen.getByText(project.title)).toBeInTheDocument();
+      expect(screen.getByText(project.description['es-ES'])).toBeInTheDocument();
     });
   });
 
