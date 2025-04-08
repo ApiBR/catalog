@@ -18,6 +18,7 @@ export function LanguageSelector({ currentLanguage, onLanguageChange }: Language
       <select
         value={currentLanguage}
         onChange={(e) => onLanguageChange(e.target.value as Language)}
+        aria-label="Select language"
         className="appearance-none bg-white border border-[#007d30] rounded-lg pl-10 pr-8 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#007d30] cursor-pointer"
       >
         {languages.map((lang) => (
