@@ -1,110 +1,59 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { Project } from "../types";
+import { ExternalLink, Code, BookOpen } from 'lucide-react';
+import { Project, Language } from '../types';
+import { translations } from '../data/translations';
 
-const Card = styled.div`
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+interface ProjectCardProps {
+  project: Project;
+  language: Language;
+}
 
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 16px rgba(0, 0, 0, 0.2);
-  }
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-`;
-
-const Content = styled.div`
-  padding: 16px;
-  text-align: center;
-`;
-
-const Title = styled.h3`
-  margin: 0;
-  font-size: 1.2rem;
-  color: #009b3a;
-`;
-
-const Links = styled.div`
-  margin-top: 12px;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-`;
-
-const LinkButton = styled.a`
-  text-decoration: none;
-  background: #ffdf00;
-  color: #000;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  transition: background 0.2s;
-
-  &:hover {
-    background: #009b3a;
-    color: #fff;
-  }
-`;
-
-const Description = styled.p`
-  margin: 0;
-  font-size: 1rem;
-  color: #000000;
-`;
-
-/**
- * A functional component that renders a project card displaying project details.
- *
- * @component
- * @param {Object} props - The properties for the ProjectCard component.
- * @param {string} props.title - The title of the project.
- * @param {string} props.description - The description of the project.
- * @param {string} props.slug - The unique identifier for the project, used in URLs.
- * @param {number} props.apiVersion - The version of the API to be displayed.
- *
- * @returns {JSX.Element} A JSX element representing the project card.
- *
- * @example
- * // Example usage of ProjectCard component
- * <ProjectCard title="My Project" slug="my-project" apiVersion={1} />
- *
- * @throws {Error} Throws an error if any required prop is missing.
- */
-const ProjectCard: React.FC<Project> = ({ title, description, slug, apiVersion }) => {
-  const imageUrl = `project-images/${slug}.png`;
-  const uiUrl = `https://apibr.com/ui/${slug}/`;
-  const swaggerUrl = `https://apibr.com/${slug}/swagger`;
-  const apiUrl = `https://apibr.com/${slug}/api/v${apiVersion}`;
-
+export function ProjectCard({ project, language }: ProjectCardProps) {
   return (
-    <Card data-testid="project-card">
-      <Image src={imageUrl} alt={title} />
-      <Content>
-        <Title>{title}</Title>
-        <Links>
-          <LinkButton href={uiUrl} target="_blank">
-            UI
-          </LinkButton>
-          <LinkButton href={swaggerUrl} target="_blank">
-            Swagger
-          </LinkButton>
-          <LinkButton href={apiUrl} target="_blank">
-            API (v{apiVersion})
-          </LinkButton>
-        </Links>
-        <Description>{description}</Description>
-      </Content>
-    </Card>
+    <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-[1.02] border border-gray-200">
+      <div className="h-48 bg-gradient-to-r from-[#009739] via-[#FFCC29] to-[#002776] relative overflow-hidden">
+        <img
+          src={`/projects-images/${project.slug}.jpg`}
+          alt={project.title}
+          className="w-full h-full object-cover mix-blend-overlay"
+        />
+      </div>
+      
+      <div className="p-6">
+        <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
+        <p className="text-gray-600 mb-6">{project.description[language]}</p>
+        
+        <div className="space-y-3">
+          <a
+            href={`https://apibr.com/ui/${project.slug}/`}
+            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#009739]/10 hover:bg-[#009739]/20 text-[#009739] transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <ExternalLink className="w-4 h-4" />
+            <span className="font-medium">{translations.openUI[language]}</span>
+          </a>
+          
+          <a
+            href={`https://apibr.com/${project.slug}/api/v${project.apiVersion}`}
+            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#002776]/10 hover:bg-[#002776]/20 text-[#002776] transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Code className="w-4 h-4" />
+            <span className="font-medium">{translations.viewAPI[language]}</span>
+          </a>
+          
+          <a
+            href={`https://apibr.com/${project.slug}/swagger`}
+            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-[#FFCC29]/10 hover:bg-[#FFCC29]/20 text-[#997a19] transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <BookOpen className="w-4 h-4" />
+            <span className="font-medium">{translations.swaggerUI[language]}</span>
+          </a>
+        </div>
+      </div>
+    </div>
   );
-};
-
-export default ProjectCard;
+}

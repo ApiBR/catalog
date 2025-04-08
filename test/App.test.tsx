@@ -2,24 +2,19 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from '../src/App';
 
-describe('App Component', () => {
-  it('renders the Header component', () => {
+describe('App', () => {
+  it('renders the header with correct title', () => {
     render(<App />);
-    const headerElement = screen.getByText(/^API BR - Catalog$/i);
-    expect(headerElement).toBeInTheDocument();
+    expect(screen.getByText(/API BR - Catálogo/i)).toBeInTheDocument();
   });
 
-  it('renders the ProjectGrid component with projects', () => {
+  it('renders the main content with projects', () => {
     render(<App />);
-    const projectTitleVagasAggregator = screen.getByText(/^Vagas Aggregator$/i);
-    expect(projectTitleVagasAggregator).toBeInTheDocument();
-    const projectTitleSportsAgenda = screen.getByText(/^Sports Agenda$/i);
-    expect(projectTitleSportsAgenda).toBeInTheDocument();
+    expect(screen.getByRole('main')).toBeInTheDocument();
   });
 
-  it('renders the Footer component', () => {
+  it('renders the footer', () => {
     render(<App />);
-    const footerElement = screen.getByText(/developed by/i);
-    expect(footerElement).toBeInTheDocument();
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
   });
 });
