@@ -10,11 +10,11 @@ interface ProjectCardProps {
 export function ProjectCard({ project, language }: ProjectCardProps) {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-[1.02] border border-gray-200">
-      <div className="h-48 bg-gradient-to-r from-[#009739] via-[#FFCC29] to-[#002776] relative overflow-hidden">
+      <div className="h-48 bg-[#009739] relative overflow-hidden">
         <img
-          src={`/projects-images/${project.slug}.jpg`}
+          src={`/project-images/${project.slug}.png`}
           alt={project.title}
-          className="w-full h-full object-cover mix-blend-overlay"
+          className="w-full h-full object-cover opacity-90"
         />
       </div>
       
