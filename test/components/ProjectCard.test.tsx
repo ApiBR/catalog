@@ -42,6 +42,6 @@ describe('ProjectCard', () => {
   it('renders project image with correct path', () => {
     render(<ProjectCard project={mockProject} language="en-US" />);
     const img = screen.getByAltText('Test Project');
-    expect(img).toHaveAttribute('src', '/projects-images/test-project.jpg');
+    expect(img).toHaveAttribute('src', '/project-images/test-project.png');
   });
 });
