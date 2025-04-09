@@ -1,6 +1,6 @@
 # 📚 API BR – Catalog
 
-[![Vite](https://img.shields.io/badge/Vite-4.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![GitHub Actions](https://img.shields.io/github/actions/workflow/status/apibr/catalog/build.yml?label=CI&logo=github&style=flat-square)](https://github.com/apibr/catalog/actions)
@@ -29,9 +29,9 @@
 
 This project is built with the following technologies:
 
-- **Vite** – Lightning-fast build tool for modern frontends  
-- **React** – Component-based JavaScript library for building UIs  
-- **SWC** – Super-fast JS/TS compiler used by Vite  
+- **Vite** – Lightning-fast build tool for modern frontends
+- **React** – Component-based JavaScript library for building UIs
+- **SWC** – Super-fast JS/TS compiler used by Vite
 - **TypeScript** – Type-safe JavaScript for scalable and reliable code
 
 ---
@@ -43,11 +43,13 @@ This project is built with the following technologies:
 To set up the project locally:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/apibr/catalog.git
    ```
 
 2. Navigate into the project folder:
+
    ```bash
    cd catalog
    ```
@@ -77,6 +79,7 @@ This project uses [**Vitest**](https://vitest.dev/) for unit testing.
 Use the following commands:
 
 - Run all tests:
+
   ```bash
   npm run test
   ```
