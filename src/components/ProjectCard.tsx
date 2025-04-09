@@ -12,7 +12,7 @@ export function ProjectCard({ project, language }: ProjectCardProps) {
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-[1.02] border border-gray-200">
       <div className="h-48 bg-[#009739] relative overflow-hidden">
         <img
-          src={`/project-images/${project.slug}.png`}
+          src={`/ui/project-images/${project.slug}.png`}
           alt={project.title}
           className="w-full h-full object-cover opacity-90"
         />
