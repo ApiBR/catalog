@@ -7,7 +7,7 @@ export interface Project {
   apiVersion: number;
 }
 
-export type Language = 'pt-BR' | 'en-US' | 'es-ES';
+export type Language = "pt-BR" | "en-US" | "es-ES";
 
 export interface Translations {
   [key: string]: {

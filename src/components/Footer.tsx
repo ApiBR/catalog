@@ -1,6 +1,6 @@
-import { Github } from 'lucide-react';
-import { Language } from '../types';
-import { translations } from '../data/translations';
+import { Github } from "lucide-react";
+import { Language } from "../types";
+import { translations } from "../data/translations";
 
 interface FooterProps {
   language: Language;

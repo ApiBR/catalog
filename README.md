@@ -29,9 +29,9 @@
 
 This project is built with the following technologies:
 
-- **Vite** – Lightning-fast build tool for modern frontends  
-- **React** – Component-based JavaScript library for building UIs  
-- **SWC** – Super-fast JS/TS compiler used by Vite  
+- **Vite** – Lightning-fast build tool for modern frontends
+- **React** – Component-based JavaScript library for building UIs
+- **SWC** – Super-fast JS/TS compiler used by Vite
 - **TypeScript** – Type-safe JavaScript for scalable and reliable code
 
 ---
@@ -43,11 +43,13 @@ This project is built with the following technologies:
 To set up the project locally:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/apibr/catalog.git
    ```
 
 2. Navigate into the project folder:
+
    ```bash
    cd catalog
    ```
@@ -77,6 +79,7 @@ This project uses [**Vitest**](https://vitest.dev/) for unit testing.
 Use the following commands:
 
 - Run all tests:
+
   ```bash
   npm run test
   ```

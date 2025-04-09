@@ -1,6 +1,6 @@
-import { Language } from '../types';
-import { translations } from '../data/translations';
-import { LanguageSelector } from './LanguageSelector';
+import { Language } from "../types";
+import { translations } from "../data/translations";
+import { LanguageSelector } from "./LanguageSelector";
 
 interface HeaderProps {
   language: Language;
@@ -14,9 +14,9 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="bg-white p-2 rounded-lg">
-              <img 
-                src="https://apibr.com/ApiBRLogo.png" 
-                alt="API BR Logo" 
+              <img
+                src="https://apibr.com/ApiBRLogo.png"
+                alt="API BR Logo"
                 className="h-8 w-auto"
               />
             </div>
