@@ -13,6 +13,7 @@ export const projects: Project[] = [
     },
     slug: "vagas",
     apiVersion: 2,
+    githubUrl: "https://github.com/ApiBR/vagas-aggregator-ui",
   },
   {
     title: "Sports Agenda",
@@ -26,5 +27,6 @@ export const projects: Project[] = [
     },
     slug: "sports-agenda",
     apiVersion: 1,
+    githubUrl: "https://github.com/ApiBR/sports-agenda-ui",
   },
 ];
