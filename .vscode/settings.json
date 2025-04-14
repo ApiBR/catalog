@@ -2,5 +2,6 @@
     "sonarlint.connectedMode.project": {
         "connectionId": "apibr",
         "projectKey": "ApiBR_catalog"
-    }
+    },
+    "sarif-viewer.connectToGithubCodeScanning": "on"
 }
