@@ -7,8 +7,8 @@ interface ProjectsGridProps {
 }
 
 export function ProjectsGrid({ language }: ProjectsGridProps) {
-  const sortedProjects = [...projects].sort((a, b) => 
-    a.title.localeCompare(b.title)
+  const sortedProjects = [...projects].sort((a, b) =>
+    a.title.localeCompare(b.title),
   );
   return (
     <div className="container mx-auto px-4">
