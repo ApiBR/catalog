@@ -1,4 +1,4 @@
-import { ExternalLink, Code, BookOpen } from "lucide-react";
+import { ExternalLink, Code, BookOpen, Github } from "lucide-react";
 import { Project, Language } from "../types";
 import { translations } from "../data/translations";
 
@@ -57,6 +57,16 @@ export function ProjectCard({ project, language }: ProjectCardProps) {
             <span className="font-medium">
               {translations.swaggerUI[language]}
             </span>
+          </a>
+
+          <a
+            href={project.githubUrl}
+            className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github className="w-4 h-4" />
+            <span className="font-medium">GitHub</span>
           </a>
         </div>
       </div>
