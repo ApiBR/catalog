@@ -5,9 +5,10 @@ export interface Project {
   };
   slug: string;
   apiVersion: number;
+  githubUrl: string;
 }
 
-export type Language = "pt-BR" | "en-US" | "es-ES";
+export type Language = 'pt-BR' | 'en-US' | 'es-ES';
 
 export interface Translations {
   [key: string]: {
