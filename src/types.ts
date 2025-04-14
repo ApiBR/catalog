@@ -5,6 +5,7 @@ export interface Project {
   };
   slug: string;
   apiVersion: number;
+  githubUrl: string;
 }
 
 export type Language = "pt-BR" | "en-US" | "es-ES";
