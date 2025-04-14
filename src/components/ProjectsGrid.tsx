@@ -7,6 +7,9 @@ interface ProjectsGridProps {
 }
 
 export function ProjectsGrid({ language }: ProjectsGridProps) {
+  const sortedProjects = [...projects].sort((a, b) => 
+    a.title.localeCompare(b.title)
+  );
   return (
     <div className="container mx-auto px-4">
       <div
@@ -18,7 +21,7 @@ export function ProjectsGrid({ language }: ProjectsGridProps) {
           width: "100%",
         }}
       >
-        {projects.map((project) => (
+        {sortedProjects.map((project) => (
           <ProjectCard
             key={project.slug}
             project={project}
