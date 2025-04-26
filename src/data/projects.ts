@@ -12,6 +12,7 @@ export const projects: Project[] = [
         "🏦🔍 Una interfaz basada en web que enumera la lista de bancos brasileños desde github.com/guibranco/BancosBrasileiros.",
     },
     slug: "banks-directory",
+    apiVersion: 1,
     githubUrl: "https://github.com/ApiBR/banks-directory-ui",
   },
   {
