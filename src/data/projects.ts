@@ -2,6 +2,20 @@ import { Project } from "../types";
 
 export const projects: Project[] = [
   {
+    title: "Banks Directory",
+    description: {
+      "pt-BR":
+        "🏦🔍 Uma interface baseada na web que lista a Lista de Bancos Brasileiros do github.com/guibranco/BancosBrasileiros",
+      "en-US":
+        "🏦🔍 A web-based interface that lists the Brazilian Banks List from github.com/guibranco/BancosBrasileiros.",
+      "es-ES":
+        "🏦🔍 Una interfaz basada en web que enumera la lista de bancos brasileños desde github.com/guibranco/BancosBrasileiros.",
+    },
+    slug: "banks-directory",
+    apiVersion: 1,
+    githubUrl: "https://github.com/ApiBR/banks-directory-ui",
+  },
+  {
     title: "Vagas Aggregator",
     description: {
       "pt-BR":
