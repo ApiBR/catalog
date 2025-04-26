@@ -6,27 +6,47 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
   <loc>https://apibr.com/ui/</loc>
-  <lastmod>2022-11-10T06:00:00+00:00</lastmod>
+  <lastmod>2025-04-26T23:38:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://apibr.com/ui/vagas/</loc>
-  <lastmod>2022-11-10T06:00:00+00:00</lastmod>
+  <loc>https://apibr.com/ui/banks-directory/</loc>
+  <lastmod>2025-04-26T23:38:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>      
+<url>
+  <loc>https://apibr.com/ui/sports-agenda/</loc>
+  <lastmod>2025-04-26T23:38:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://apibr.com/ui/vagas/repositorios</loc>
-  <lastmod>2022-11-10T06:00:00+00:00</lastmod>
+  <loc>https://apibr.com/ui/sports-agenda/leagues/</loc>
+  <lastmod>2025-04-26T23:38:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://apibr.com/ui/vagas/recrutadores</loc>
-  <lastmod>2022-11-10T06:00:00+00:00</lastmod>
+  <loc>https://apibr.com/ui/sports-agenda/teams/</loc>
+  <lastmod>2025-04-26T23:38:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://apibr.com/ui/vagas/nova-vaga</loc>
-  <lastmod>2022-11-10T06:00:00+00:00</lastmod>
+  <loc>https://apibr.com/ui/sports-agenda/matches/</loc>
+  <lastmod>2025-04-26T23:38:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://apibr.com/ui/vagas/repositorios/</loc>
+  <lastmod>2025-04-26T23:38:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://apibr.com/ui/vagas/recrutadores/</loc>
+  <lastmod>2025-04-26T23:38:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://apibr.com/ui/vagas/nova-vaga/</loc>
+  <lastmod>2025-04-26T23:38:00+00:00</lastmod>
   <priority>0.50</priority>
 </url>
 </urlset>
