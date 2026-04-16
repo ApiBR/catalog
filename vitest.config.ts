@@ -14,4 +14,9 @@ export default defineConfig({
       exclude: ["test/**/*.test.{ts,tsx}", "src/types.ts", "src/vite-env.d.ts"],
     },
   },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });
