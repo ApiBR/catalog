@@ -150,6 +150,8 @@ jobs:
     needs: [build, deploy]
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     env:
       fullSemVer: ${{ needs.build.outputs.fullSemVer }}
     steps:
