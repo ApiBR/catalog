@@ -1,4 +1,5 @@
-import { ExternalLink, Code, BookOpen, Github } from "lucide-react";
+import { ExternalLink, Code, BookOpen } from "lucide-react";
+import { GitHubIcon } from "@/components/Icons/GitHubIcon";
 import { Project, Language } from "../types";
 import { translations } from "../data/translations";
 
@@ -65,7 +66,7 @@ export function ProjectCard({ project, language }: ProjectCardProps) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Github className="w-4 h-4" />
+            <GitHubIcon className="w-4 h-4" />
             <span className="font-medium">GitHub</span>
           </a>
         </div>
