@@ -3,8 +3,7 @@
 [![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=white)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/apibr/catalog/build.yml?label=CI&logo=github&style=flat-square)](https://github.com/apibr/catalog/actions)
-[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/apibr/catalog/deploy.yml?label=CD&logo=github&style=flat-square)](https://github.com/apibr/catalog/actions)
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/apibr/catalog/ci-cd.yml?label=CI%2FCD&logo=github&style=flat-square)](https://github.com/apibr/catalog/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -14,6 +13,10 @@
 **API BR – Catalog** is the central hub for the [API BR](https://github.com/apibr) project. It provides a clean, user-friendly interface listing the available public services in the ecosystem. Services are grouped by category and link directly to their respective repositories.
 
 ### 🔗 Available Services
+
+- **Banks Directory**
+  REST API to access Brazilian Banks List from [![GuiBranco/BancosBrasileiros](https://img.shields.io/badge/GuiBranco%2FBancosBrasileiros-black?style=flat&logo=github)](https://github.com/GuiBranco/BancosBrasileiros).
+  Web UI built with React.
 
 - **Developer Vacancies**  
   REST API to access developer job vacancies from GitHub repositories.  
