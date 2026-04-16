@@ -1,5 +1,5 @@
 import { ExternalLink, Code, BookOpen } from "lucide-react";
-import { GitHubIcon } from "@/components/Icons/GitHubIcon";
+import { GitHubIcon } from "@/components/icons/GitHubIcon";
 import { Project, Language } from "../types";
 import { translations } from "../data/translations";
 
