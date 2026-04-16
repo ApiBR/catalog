@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { GitHubIcon } from "@/components/icons/GitHubIcon";
 import { Language } from "../types";
 import { translations } from "../data/translations";
 
@@ -43,7 +43,7 @@ export function Footer({ language }: FooterProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 hover:text-[#FFCC29] transition-colors"
           >
-            <Github className="w-6 h-6" />
+            <GitHubIcon className="w-6 h-6" />
             <span className="font-medium">GitHub</span>
           </a>
         </span>
