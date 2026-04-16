@@ -1,4 +1,4 @@
-import { GitHubIcon } from "@/components/Icons/GitHubIcon";
+import { GitHubIcon } from "@/components/icons/GitHubIcon";
 import { Language } from "../types";
 import { translations } from "../data/translations";
 
